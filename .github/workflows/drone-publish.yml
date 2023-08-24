@@ -1,0 +1,19 @@
+name: deploy-drone
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Build Docker image
+        run: docker build -t asmovic100/playground -f Dockerfile.dev .
+
+      - name: Run tests
+        run: docker run asmovic100/playground npm run test -- --coverage
