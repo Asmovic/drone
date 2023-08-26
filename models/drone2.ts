@@ -1,6 +1,5 @@
-import { Model, DataTypes, BelongsToManyAddAssociationsMixin } from 'sequelize';
+import { Model, DataTypes } from 'sequelize';
 import { sequelize } from '../database'; // Import your Sequelize instance
-import Medication from './medication';
 
 export enum DroneModelEnum {
   LightWeight = 'Lightweight',
