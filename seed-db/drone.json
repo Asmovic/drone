@@ -1,0 +1,82 @@
+[
+  {
+    "serialNumber": "GHA989",
+    "model": "Lightweight",
+    "weightLimit": 410,
+    "batteryCapacity": 20,
+    "loadedMedicationsId": "[5, 9]",
+    "state": "DELIVERED"
+  },
+  {
+    "serialNumber": "SHAT903989",
+    "model": "Middleweight",
+    "weightLimit": 450,
+    "batteryCapacity": 55.80,
+    "loadedMedicationsId": "[9, 10]",
+    "state": "RETURNING"
+  },
+  {
+    "serialNumber": "FLTD99821",
+    "model": "Cruiserweight",
+    "weightLimit": 400,
+    "batteryCapacity": 59.30,
+    "loadedMedicationsId": "[5, 9, 10]",
+    "state": "LOADING"
+  },
+  {
+    "serialNumber": "THJ39188",
+    "model": "Heavyweight",
+    "weightLimit": 450,
+    "batteryCapacity": 49.80,
+    "loadedMedicationsId": "[5, 10]",
+    "state": "IDLE"
+  },
+  {
+    "serialNumber": "XSLJG4533I",
+    "model": "Lightweight",
+    "weightLimit": 490,
+    "batteryCapacity": 98.80,
+    "loadedMedicationsId": "[5, 9]",
+    "state": "LOADING"
+  },
+  {
+    "serialNumber": "VBG98389",
+    "model": "Cruiserweight",
+    "weightLimit": 280,
+    "batteryCapacity": 78,
+    "loadedMedicationsId": "[5, 9, 10]",
+    "state": "DELIVERED"
+  },
+  {
+    "serialNumber": "ZXEO0813",
+    "model": "Lightweight",
+    "weightLimit": 495,
+    "batteryCapacity": 83,
+    "loadedMedicationsId": "[5, 9]",
+    "state": "DELIVERING"
+  },
+  {
+    "serialNumber": "SZXJ7836",
+    "model": "Heavyweight",
+    "weightLimit": 390,
+    "batteryCapacity": 73,
+    "loadedMedicationsId": "[5, 9, 10]",
+    "state": "LOADED"
+  },
+  {
+    "serialNumber": "POS3443N",
+    "model": "Middleweight",
+    "weightLimit": 418,
+    "batteryCapacity": 92,
+    "loadedMedicationsId": "[5, 9]",
+    "state": "LOADING"
+  },
+  {
+    "serialNumber": "DEW4492",
+    "model": "Cruiserweight",
+    "weightLimit": 450,
+    "batteryCapacity": 100,
+    "loadedMedicationsId": "[9, 10]",
+    "state": "IDLE"
+  }
+]

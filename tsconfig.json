@@ -101,5 +101,11 @@
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
     "skipLibCheck": true,
     "types": ["jest","node"],
-  }
+    "resolveJsonModule": true
+  },
+  "include": [
+    "*.ts",
+    "seed-db/*.json",
+    "seed-db/scripts/*.ts"// Include JSON files
+  ],
 }

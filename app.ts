@@ -1,9 +1,11 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 
-import routes from './routes/drones';
+import droneRoutes from './routes/drones';
+import medicationRoutes from './routes/medication';
 
 export const app = express();
 app.use(bodyParser.json());
 
-app.use(routes);
+app.use(droneRoutes);
+app.use(medicationRoutes);

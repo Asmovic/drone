@@ -1,14 +1,14 @@
-import { Model, DataTypes } from 'sequelize';
+/* import { DataTypes } from 'sequelize';
 import { sequelize } from '../database';
 
-enum DroneModel {
+export enum DroneModelEnum {
   LightWeight = 'Lightweight',
   MiddleWeight = 'Middleweight',
   CruiserWeight = 'Cruiserweight',
   HeavyWeight = 'Heavyweight',
 }
 
-enum DroneState {
+export enum DroneState {
   IDLE = 'IDLE',
   LOADING = 'LOADING',
   LOADED = 'LOADED',
@@ -17,46 +17,56 @@ enum DroneState {
   RETURNING = 'RETURNING',
 }
 
-interface DroneAttributes {
-  serialNumber: string;
-  model: DroneModel;
-  weightLimit: number;
-  batteryCapacity: number;
-  state: DroneState;
-}
-
-interface DroneInstance extends Model<DroneAttributes>, DroneAttributes {}
-
-const Drone = sequelize.define<DroneInstance>('Drone', {
+const Drone = sequelize.define('Drone', {
   serialNumber: {
     type: DataTypes.STRING,
     allowNull: false,
     primaryKey: true,
+    validate: {
+      len: {
+        args: [1, 100], // Validate length between 1 and 100 characters
+        msg: 'Serial number cannot be more than 100 characters',
+      },
+    },
   },
   model: {
-    type: DataTypes.STRING,
+    type: DataTypes.ENUM,
+    values: Object.values(DroneModelEnum), // Use enum values in the field definition
     allowNull: false,
+    validate: {
+      isIn: {
+        args: [Object.values(DroneModelEnum)], // Validate that the value is in the enum values
+        msg: 'Invalid drone model', // Custom error message
+      },
+    },
   },
   weightLimit: {
     type: DataTypes.FLOAT,
     allowNull: false,
+    validate: {
+      max: 500, // Validate maximum weight limit
+    },
   },
   batteryCapacity: {
-    type: DataTypes.INTEGER,
+    type: DataTypes.FLOAT,
     allowNull: false,
+    validate: {
+      min: 0, // Validate minimum battery capacity
+      max: 100, // Validate maximum battery capacity
+    },
   },
   state: {
-    type: DataTypes.ENUM(
-      'IDLE',
-      'LOADING',
-      'LOADED',
-      'DELIVERING',
-      'DELIVERED',
-      'RETURNING'
-    ),
-    defaultValue: DroneState.IDLE,
+    type: DataTypes.ENUM,
+    values: Object.values(DroneState), // Use enum values in the field definition
     allowNull: false,
+    validate: {
+      isIn: {
+        args: [Object.values(DroneState)], // Validate that the value is in the enum values
+        msg: 'Invalid drone state', // Custom error message
+      },
+    },
   },
 });
 
 export default Drone;
+ */

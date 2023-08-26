@@ -1,4 +1,4 @@
-import Drone from './models/drone';
+/* import Drone from './models/drone'; */
 import BatteryLog from './models/batteryLog';
 
 export const startBatteryCheck = () => {

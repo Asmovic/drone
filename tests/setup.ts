@@ -1,4 +1,4 @@
-import Drone from '../models/drone';
+import Drone from '../models/drone2';
 
 beforeAll(async () => {
   /*   await Drone.destroy({
@@ -11,9 +11,9 @@ beforeAll(async () => {
 beforeEach(async () => {});
 
 afterAll(async () => {
-  await Drone.destroy({
+  /*   await Drone.destroy({
     where: {
       serialNumber: 'DRN00TEST',
     },
-  });
+  }); */
 });
