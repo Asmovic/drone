@@ -1,6 +1,7 @@
 const fs = require('fs');
 const Drone = require('../../models/drone2');
 const Medication = require('../../models/medication');
+const BatteryLog = require('../../models/batteryLog');
 
 const { sequelize } = require('../../database');
 
@@ -29,9 +30,10 @@ const importData = async () => {
 //DELETE ALL DATA FROM DB
 const deleteData = async () => {
   try {
-    await sequelize.sync();
+    await sequelize.sync({ force: true });
     await sequelize.models.Drone.destroy({ where: {} });
     await sequelize.models.Medication.destroy({ where: {} });
+    await sequelize.models.BatteryLog.destroy({ where: {} });
     console.log('Data deleted successfully');
   } catch (error) {
     console.log('Error', error);

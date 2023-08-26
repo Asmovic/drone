@@ -107,5 +107,5 @@
     "*.ts",
     "seed-db/*.json",
     "seed-db/scripts/*.ts"// Include JSON files
-  ],
+, "utils/batteryChecker.ts"  ],
 }
