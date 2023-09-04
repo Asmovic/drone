@@ -6,6 +6,8 @@ import medicationRoutes from './routes/medication';
 
 export const app = express();
 app.use(bodyParser.json());
-
+app.get('/', (req,res)=>{
+  res.send({ message: "Hi Buddy!!" });
+});
 app.use(droneRoutes);
 app.use(medicationRoutes);
